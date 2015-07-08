@@ -16,7 +16,7 @@ void		pebkac(int i)
 {
 	if (!i)
 	{
-		ft_printf("Usage : ./fdf <mapfile.fdf>");
+		ft_printf("Usage : ./fdf <mapfile.fdf>\n");
 		exit (0);
 	}
 	else
