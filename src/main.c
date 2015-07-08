@@ -12,13 +12,31 @@
 
 #include <libmlx.h>
 
+void		pebkac(int i)
+{
+	if (!i)
+	{
+		ft_printf("Usage : ./fdf <mapfile.fdf>");
+		exit (0);
+	}
+	else
+	{
+		ft_printf("%s\n%s\n%s\n%s\n", 
+			"WASD : rotations",  
+			"UDLR : translate", 
+			"-/= : Zoom",
+			"</> : DeltaZ");
+	}
+}
+
 int			main(int ac, char **av)
 {
 	t_map *map;
 	t_env *c;
 
 	if (ac == 1)
-		exit(0);
+		pebkac(0);
+	pebkac(1);
 	c = (t_env *)malloc(sizeof(t_env));
 	map = (t_map *)malloc(sizeof(t_map));
 	c->off = XCENTER;
